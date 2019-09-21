@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <h2>Register With Us</h2>
+        <form action="#" onsubmit="event.preventDefault()" autocomplete="off">
+            <div class="form-group">
+                <input type="text" placeholder="Full name*" id="name" onblur="validName()">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="email" placeholder="Email address*" id="email" onblur="validEmail()">
+                <span class="error" id="emailError"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="password" placeholder="Password*" id="pass" onblur="validPassword()">
+                <span class="error" id="passError"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="password" placeholder="Confirm password*" id="passConfirm" onblur="validPasswordConfirm()">
+                <span class="error" id="passConfirmError"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="button" value = "Submit" id="submit">
+            </div>
+        </form>
+    </main>
+    
+    <script src="js/form.js"></script>
+</body>
+</html>
