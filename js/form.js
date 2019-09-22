@@ -107,7 +107,9 @@ const generalValidation = () => {
 
     if( nameErr == false && emailErr == false && passErr  == false && passConfirmErr ==  false) {
         alert(`Super Cool! \nYou did the needful \nYour name is ${name} \nYour email is ${email} \nAnd your password is ${password} `)
+        nameErr = emailErr = passErr  = passConfirmErr = true;
     } else {
         alert("Please check the form and do the needful")
+        nameErr = emailErr = passErr  = passConfirmErr = true;
     }
 }
