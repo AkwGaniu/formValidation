@@ -26,17 +26,17 @@ const validName = () => {
     let name = nameField.value
 
     if(name == "") {
-            printError("#nameError", "Please enter your full name");
+        printError("#nameError", "Please enter your full name");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("#nameError", "Please enter a valid name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
-            if(regex.test(name) === false) {
-                printError("#nameError", "Please enter a valid name");
-            } else {
-                printError("#nameError", "");
-                nameErr = false;
-            }
+            printError("#nameError", "");
+            nameErr = false;
         }
-        return name
+    }
+    return name
 }
 
 
@@ -101,19 +101,13 @@ const validPasswordConfirm = () =>  {
 //General Validation
 const generalValidation = () => {
     let name = validName()
-        let email = validEmail()
-        let password = validPassword()
-        validPasswordConfirm()
+    let email = validEmail()
+    let password = validPassword()
+    validPasswordConfirm()
 
     if( nameErr == false && emailErr == false && passErr  == false && passConfirmErr ==  false) {
-        // Collecting Registration details
-
-        
-
         alert(`Super Cool! \nYou did the needful \nYour name is ${name} \nYour email is ${email} \nAnd your password is ${password} `)
-
     } else {
         alert("Please check the form and do the needful")
     }
-
 }
