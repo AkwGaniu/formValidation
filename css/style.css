@@ -15,8 +15,8 @@ body{
 }
 
 main{
-    margin-top: 100px;
-    width: 40%;
+    margin: 4% auto;
+    width: 50%;
     background-color: white;
     padding: 10px;
     border-radius: 20px;
@@ -64,10 +64,10 @@ main h2 {
      
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     main{
-        width: 100%;
-        margin-top:70px;
+        width: 90%;
+        margin-top: 2% auto;
     }
 
     
