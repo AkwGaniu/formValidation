@@ -15,13 +15,14 @@ body{
 }
 
 main{
-    margin: 4% auto;
+    margin: 8% auto;
     width: 50%;
     background-color: white;
     padding: 10px;
     border-radius: 20px;
 
 }
+
 
 main h2 {
     font-size: 2em;
@@ -67,8 +68,8 @@ main h2 {
 
 @media (max-width: 768px) {
     main{
-        width: 90%;
-        margin-top: 2% auto;
+        width: 80%;
+        margin: 20% auto;
     }
 
     

@@ -102,12 +102,12 @@ const validPasswordConfirm = () =>  {
 //General Validation
 const generalValidation = () => {
     let name = validName()
-        let email = validEmail()
-        let password = validPassword()
-        validPasswordConfirm()
+    let email = validEmail()
+    let password = validPassword()
+    validPasswordConfirm()
 
-    if( nameErr == false && emailErr == false && passErr  == false && passConfirmErr ==  false) {
-        alert(`Super Cool! \nYou did the needful \nYour name is ${name} \nYour email is ${email} \nAnd your password is ${password} `)
+    if( nameErr === false && emailErr === false && passErr  === false && passConfirmErr ===  false) {
+        alert(`Super Cool! \nYou did the needful \nYour name is ${name} \nYour email is ${email} \nAnd your password is ${password}`)
         nameErr = emailErr = passErr  = passConfirmErr = true;
     } else {
         alert("Please check the form and do the needful")
