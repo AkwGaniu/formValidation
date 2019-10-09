@@ -27,17 +27,17 @@ const validName = () => {
     let name = nameField.value
 
     if(name == "") {
-            printError("#nameError", "Please enter your full name");
+        printError("#nameError", "Please enter your full name");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("#nameError", "Please enter a valid name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
-            if(regex.test(name) === false) {
-                printError("#nameError", "Please enter a valid name");
-            } else {
-                printError("#nameError", "");
-                nameErr = false;
-            }
+            printError("#nameError", "");
+            nameErr = false;
         }
-        return name
+    }
+    return name
 }
 
 
@@ -106,12 +106,16 @@ const generalValidation = () => {
     let password = validPassword()
     validPasswordConfirm()
 
+<<<<<<< HEAD
     if( nameErr === false && emailErr === false && passErr  === false && passConfirmErr ===  false) {
         alert(`Super Cool! \nYou did the needful \nYour name is ${name} \nYour email is ${email} \nAnd your password is ${password}`)
+=======
+    if( nameErr == false && emailErr == false && passErr  == false && passConfirmErr ==  false) {
+        alert(`Super Cool! \nYou did the needful \nYour name is ${name} \nYour email is ${email} \nAnd your password is ${password} `)
+>>>>>>> b756e1dbd227d3033ad89730908a8935e8cfb7b7
         nameErr = emailErr = passErr  = passConfirmErr = true;
     } else {
         alert("Please check the form and do the needful")
         nameErr = emailErr = passErr  = passConfirmErr = true;
     }
-
 }
